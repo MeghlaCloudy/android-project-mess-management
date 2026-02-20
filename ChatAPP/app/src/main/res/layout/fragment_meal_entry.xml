@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- তারিখ সিলেক্ট -->
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- মেম্বার সিলেক্ট -->
+        <Spinner
+            android:id="@+id/spinnerMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:prompt="@string/select_member_prompt" />
+
+        <!-- চেকবক্স গ্রুপ (B/L/D) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/chkBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast" />
+
+            <CheckBox
+                android:id="@+id/chkLunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Lunch" />
+
+            <CheckBox
+                android:id="@+id/chkDinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Dinner" />
+        </LinearLayout>
+
+        <!-- সেভ বাটন -->
+        <Button
+            android:id="@+id/btnSaveMeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="মিল সেভ করুন"
+            android:layout_marginTop="24dp" />
+
+        <!-- সেভ হওয়া মিলের লিস্ট -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMeals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</ScrollView>

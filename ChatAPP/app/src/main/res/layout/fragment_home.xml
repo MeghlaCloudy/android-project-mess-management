@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="হোস্টেল ম্যানেজমেন্ট সিস্টেম"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- কার্ডস (সারাংশ) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="মোট মেম্বার"
+                        android:textSize="16sp"
+                        android:textColor="#757575" />
+
+                    <TextView
+                        android:id="@+id/tvTotalMembers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="আজকের মিল"
+                        android:textSize="16sp"
+                        android:textColor="#757575" />
+
+                    <TextView
+                        android:id="@+id/tvTodayMeal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- মাসের সারাংশ -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="এই মাসের সারাংশ"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvTotalMealMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="মোট মিল: 0"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/tvTotalExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="মোট খরচ: ০.০০ টাকা"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tvPerMealCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতি মিলের দাম: ০.০০ টাকা"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- সাম্প্রতিক বাজার -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="সাম্প্রতিক বাজার"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewRecentBazar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</ScrollView>

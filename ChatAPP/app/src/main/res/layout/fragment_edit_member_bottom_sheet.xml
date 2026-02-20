@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="মেম্বার এডিট করুন"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etMemberName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="নাম"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etMemberPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ফোন নম্বর"
+        android:inputType="phone"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnUpdateMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="আপডেট করুন"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
