@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design grays (হালকা থেকে গাঢ়) -->
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>  <!-- এটা যোগ করো – এখানে সমস্যা ছিল -->
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="purple_500">#FF6200EE</color>
+
+    <!-- অন্যান্য কালার যদি চাও -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
